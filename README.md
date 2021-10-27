@@ -1,1 +1,1 @@
-# Duo-ShppitBot-Telegram
+# Duo-ShopitBot-Telegram
