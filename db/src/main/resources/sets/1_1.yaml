@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - logicalFilePath: db/src/main/resources/dbchangelog-master.xml
+  - changeSet:
+      id: 1_1
+      author: 1
+      changes:
+        - createTable:
