@@ -1,5 +1,6 @@
-package ru.bot.shopper.api.model;
+package ru.bot.shopper.model;
 
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.util.UUID;
 
+@Data
 @MappedSuperclass
 public class BaseEntity {
 
