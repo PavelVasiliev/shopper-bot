@@ -1,3 +1,7 @@
+bot:
+  name: ShoppitBot
+  token: ${BOT_TOKEN}
+
 server:
   port: 8080
 spring:
