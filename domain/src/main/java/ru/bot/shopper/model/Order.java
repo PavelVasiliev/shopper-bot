@@ -1,11 +1,13 @@
-package ru.bot.shopper.api.model;
+package ru.bot.shopper.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
 @Table(name = "ORDERS")
@@ -13,7 +15,7 @@ public class Order extends BaseEntity {
 
 
     @Column(name = "NUMBER")
-    private Integer number;
+    private Long number;
 
     @Column(name = "DATE")
     private ZonedDateTime date;
