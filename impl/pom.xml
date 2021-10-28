@@ -2,18 +2,38 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>BotShopper</artifactId>
-        <groupId>org.example</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ru.bot.shopper</groupId>
+        <artifactId>BotShopper</artifactId>
+        <version>${revision}${sha1}${changelist}</version>
+    </parent>
 
-    <artifactId>impl</artifactId>
+    <name>BotShopper :: impl</name>
+    <artifactId>ru.bot.shopper.impl</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+
+    <dependencies>
+    <dependency>
+        <groupId>ru.bot.shopper</groupId>
+        <artifactId>ru.bot.shopper.api</artifactId>
+        <version>${revision}${sha1}${changelist}</version>
+    </dependency>
+    <dependency>
+        <groupId>ru.bot.shopper</groupId>
+        <artifactId>ru.bot.shopper.db</artifactId>
+        <version>${revision}${sha1}${changelist}</version>
+    </dependency>
+    <dependency>
+        <groupId>ru.bot.shopper</groupId>
+        <artifactId>ru.bot.shopper.domain</artifactId>
+        <version>${revision}${sha1}${changelist}</version>
+    </dependency>
+    </dependencies>
 
 </project>

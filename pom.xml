@@ -4,19 +4,35 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+
+
+    <groupId>ru.bot.shopper</groupId>
     <artifactId>BotShopper</artifactId>
+    <version>${revision}${sha1}${changelist}</version>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <name>BotShopper</name>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.5</version>
+        <relativePath/>
+    </parent>
+
 
     <properties>
+        <org.springframework.version>2.5.5</org.springframework.version>
         <java.version>11</java.version>
+        <revision>1.0.0</revision>
+        <sha1></sha1>
+        <changelist>-SNAPSHOT</changelist>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <org.projectlombok.version>1.18.22</org.projectlombok.version>
         <telegram.version>5.3.0</telegram.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.dependencies.version>3.1.2</maven.dependencies.version>
+        <org.postgressql.version>42.2.24</org.postgressql.version>
     </properties>
 
     <modules>
@@ -37,6 +53,34 @@
             <groupId>org.telegram</groupId>
             <artifactId>telegrambotsextensions</artifactId>
             <version>${telegram.version}</version>
+        </dependency>
+
+        <!-- SpringBoot -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${org.springframework.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <!-- Postgres -->
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${org.postgressql.version}</version>
         </dependency>
 
         <!-- Lombok -->
