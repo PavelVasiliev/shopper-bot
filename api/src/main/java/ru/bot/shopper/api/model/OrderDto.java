@@ -12,20 +12,19 @@ import java.time.ZonedDateTime;
 @Data
 public class OrderDto {
 
-
     @JsonProperty("number")
     private Long number;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Europe/Moscow")
     @JsonProperty("date")
-    private ZonedDateTime date;
+    private ZonedDateTime date; //
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Europe/Moscow")
     @JsonProperty("lastChangeDate")
     private ZonedDateTime lastChangeDate;
 
     @JsonProperty("supplierArticle")
-    private String supplierArticle;
+    private String supplierArticle;//
 
     @JsonProperty("techSize")
     private String techSize;
@@ -34,13 +33,13 @@ public class OrderDto {
     private String barcode;
 
     @JsonProperty("quantity")
-    private Integer quantity;
+    private Integer quantity;//
 
    @JsonProperty("totalPrice")
-    private BigDecimal totalPrice;
+    private BigDecimal totalPrice;//
 
    @JsonProperty("discountPercent")
-    private Integer discountPercent;
+    private Integer discountPercent;//
 
     @JsonProperty("warehouseName")
     private String warehouseName;
@@ -74,4 +73,15 @@ public class OrderDto {
 
     @JsonProperty("gNumber")
     private String gNumber;
+
+    @Override
+    public String toString() {
+        return "OrderDto{" +
+                "number=" + number +
+                ", date=" + date +
+                ", quantity=" + quantity +
+                ", totalPrice=" + totalPrice +
+                ", subject='" + subject + '\'' +
+                '}';
+    }
 }
