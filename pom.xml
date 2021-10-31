@@ -36,6 +36,7 @@
         <spring-boot-starter-log4j2.version>2.5.5</spring-boot-starter-log4j2.version>
         <snakeyaml.version>1.29</snakeyaml.version>
         <org.postgressql.version>42.2.24</org.postgressql.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
     <modules>
@@ -114,6 +115,11 @@
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>${snakeyaml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
         </dependency>
     </dependencies>
 
