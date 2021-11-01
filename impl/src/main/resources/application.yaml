@@ -1,15 +1,16 @@
 bot:
   name: ShoppitBot
   token: ${BOT_TOKEN}
+  past-date-minutes: 15
 
 server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/botshop
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/sn
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: postgres
+    password: 5544676Hen
   liquibase:
     enabled: true
     drop-first: true

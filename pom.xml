@@ -36,6 +36,7 @@
         <spring-boot-starter-log4j2.version>2.5.5</spring-boot-starter-log4j2.version>
         <snakeyaml.version>1.29</snakeyaml.version>
         <org.postgressql.version>42.2.24</org.postgressql.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
     <modules>
@@ -115,6 +116,11 @@
             <artifactId>snakeyaml</artifactId>
             <version>${snakeyaml.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -127,6 +133,11 @@
                 <configuration>
                     <release>${java.version}</release>
                     <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>

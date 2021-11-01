@@ -1,3 +1,7 @@
+bot:
+  name: ShoppitBot
+  token: ${BOT_TOKEN}
+
 server:
   port: 8080
 spring:
@@ -23,3 +27,10 @@ spring:
         jdbc:
           batch-size: 32
     open-in-view: false
+
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+wildberries:
+  token: ${KEY}

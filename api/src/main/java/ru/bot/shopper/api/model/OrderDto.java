@@ -4,14 +4,11 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import javax.persistence.Column;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 @Data
 public class OrderDto {
-
 
     @JsonProperty("number")
     private Long number;
@@ -25,7 +22,7 @@ public class OrderDto {
     private ZonedDateTime lastChangeDate;
 
     @JsonProperty("supplierArticle")
-    private String supplierArticle;
+    private String supplierArticle;//
 
     @JsonProperty("techSize")
     private String techSize;
@@ -34,13 +31,13 @@ public class OrderDto {
     private String barcode;
 
     @JsonProperty("quantity")
-    private Integer quantity;
+    private Integer quantity;//
 
-   @JsonProperty("totalPrice")
-    private BigDecimal totalPrice;
+    @JsonProperty("totalPrice")
+    private BigDecimal totalPrice;//
 
-   @JsonProperty("discountPercent")
-    private Integer discountPercent;
+    @JsonProperty("discountPercent")
+    private Integer discountPercent;//
 
     @JsonProperty("warehouseName")
     private String warehouseName;
@@ -74,4 +71,13 @@ public class OrderDto {
 
     @JsonProperty("gNumber")
     private String gNumber;
+
+    public String toPrint() {
+        return "Order:\n" +
+                "subject='" + subject + '\'' +
+                ",\nquantity=" + quantity +
+                ",\nnumber=" + number +
+                ",\ndate=" + date +
+                ",\ntotalPrice=" + totalPrice;
+    }
 }
