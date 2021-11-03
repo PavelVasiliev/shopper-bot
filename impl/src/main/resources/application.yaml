@@ -1,19 +1,14 @@
-bot:
-  name: ShoppitBot
-  token: ${BOT_TOKEN}
-  past-date-minutes: 15
-
 server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/sn
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/botshop
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: 5544676Hen
+    password: postgres
   liquibase:
-    enabled: true
-    drop-first: true
+    enabled: false
+    drop-first: false
     change-log: classpath:database-market-changelog.xml
   jpa:
     show-sql: false
@@ -34,4 +29,11 @@ spring:
       write_dates_as_timestamps: false
 
 wildberries:
-  token: ${KEY}
+  token: ZTcyNDEyMWMtMDY2OS00M2VjLWIwMTItNjg2ZjdiYjFjODQx
+  url: https://suppliers-stats.wildberries.ru/api/v1/supplier/orders?dateFrom=
+  flag: 0
+
+bot:
+  name: ShoppitBot
+  token: 2091647868:AAEmbcSlbxAO1Skpqp5FFLIAYlD3YXbFQug
+  past-date-minutes: 15
