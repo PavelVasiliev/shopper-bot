@@ -4,8 +4,8 @@ spring:
   datasource:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/botshop
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: postgres
+    username: ${USER:postgres}
+    password: ${PASS:postgres}
   liquibase:
     enabled: false
     drop-first: false
